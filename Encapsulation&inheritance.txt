@@ -1,0 +1,211 @@
+class specification:
+    def __init__(self, m,r,rom,bat):
+        self.__name = m  # private
+        self._ram = r  # protected
+        self.rom = rom  #public
+        self.__bat = bat #private 
+        
+    def details(self, model):
+        print("NAme of my mobile is:",self.__name)
+        print("Ram is:",self._ram)
+        print("Rom is:",self.rom)
+        print("Model Number is:",model)
+        print("Battery inside class is:",self.__bat)
+
+obj = specification("OnePlus","6GB","128GB","4500Mah")
+obj.details("Nord")
+print("Ram outside class is:",obj._ram)
+print("Rom outside class is:",obj.rom)
+#print("Mobile Name outside class is:",obj.__name)
+print("Battery outside class is:",obj.__bat)
+
+        
+#####################################################
+
+
+class specification:
+    def __init__(self, m,r,rom,bat):
+        self.__name = m  # private
+        self._ram = r  # protected
+        self.rom = rom  #public
+        self.__bat = bat #private     
+    def details(self, model):  # public method
+        print("NAme of my mobile is:",self.__name)
+        print("Ram is:",self._ram)
+        print("Rom is:",self.rom)
+        print("Model Number is:",model)
+        print("Battery inside class is:",self.__bat)
+    def __someFeature(self.proc):  # private method
+        print("NAme of my mobile is:",self.__name)
+        print("Battery inside class is:",self.__bat)
+        print("Processor is:",proc)
+    
+
+obj = specification("OnePlus","6GB","128GB","4500Mah")
+obj.details("Nord")
+obj.__someFeature("snapdragon786")
+print("Ram outside class is:",obj._ram)
+print("Rom outside class is:",obj.rom)
+#print("Mobile Name outside class is:",obj.__name)
+#print("Battery outside class is:",obj.__bat)
+
+
+#####################################################        
+
+
+class specification:
+    def __init__(self, m,r,rom,bat):
+        self.__name = m  # private
+        self._ram = r  # protected
+        self.rom = rom  #public
+        self.__bat = bat #private     
+    def details(self, model):  # public method
+        print("NAme of my mobile is:",self.__name)
+        print("Ram is:",self._ram)
+        print("Rom is:",self.rom)
+        print("Model Number is:",model)
+        print("Battery inside class is:",self.__bat)
+    def __someFeature(proc):  # private method
+        #print("NAme of my mobile is:",self.__name)
+        #print("Battery inside class is:",self.__bat)
+        print("Processor is:",proc)
+    __someFeature("Snapdragon786")
+
+obj = specification("OnePlus","6GB","128GB","4500Mah")
+obj.details("Nord")
+obj.__someFeature("snapdragon786")
+print("Ram outside class is:",obj._ram)
+print("Rom outside class is:",obj.rom)
+print("Mobile Name outside class is:",obj.__name)
+print("Battery outside class is:",obj.__bat)
+
+
+
+
+#########################################
+# data mangling in python
+class specification:
+    def __init__(self, m,r,rom,bat):
+        self.__name = m  # private
+        self._ram = r  # protected
+        self.rom = rom  #public
+        self.__bat = bat #private     
+    def details(self, model):  # public method
+        print("NAme of my mobile is:",self.__name)
+        print("Ram is:",self._ram)
+        print("Rom is:",self.rom)
+        print("Model Number is:",model)
+        print("Battery inside class is:",self.__bat)
+    def __someFeature(self,proc):  # private method
+        print("NAme of my mobile is:",self.__name)
+        print("Battery inside class is:",self.__bat)
+        print("Processor is:",proc)
+    
+
+obj = specification("OnePlus","6GB","128GB","4500Mah")
+obj.details("Nord")
+obj._specification__someFeature("snapdragon786") # data mangling on method
+print("Ram outside class is:",obj._ram)
+print("Rom outside class is:",obj.rom)
+# data mangling on instance variable
+print("Mobile Name outside class is:",obj._specification__name)
+print("Battery outside class is:",obj._specification__bat)
+
+
+
+
+
+###########################################
+
+# inheritance
+
+
+class info:
+    def myinfo(self,name, age):
+        degree = "masters"
+        print("My name is:", name)
+        print("my age is:",age)
+        print("I have:",degree,"degree")
+class job(info):  # inheritance 
+    def job_appl(self,post):
+        print("Job application for:",post)
+obj = job()
+obj.myinfo("Avanish",26)
+obj.job_appl("Python Developer")
+
+
+
+
+class PCS:
+    def MCA(self,sem,fee):
+        print("No. of sememsters in MCA is:", sem)
+        print("Total Fee of MCA is:",fee)
+    def Mtech(self,sem,fee):
+        print("No. of sememsters in Mtech is:", sem)
+        print("Total Fee of Mtech is:",fee)
+class IT(PCS):
+    def MBAIT(self, sem, fee):
+        print("No. of sememsters in MBAIT is:", sem)
+        print("Total Fee of MBAIT is:",fee)
+class UCS(IT):
+    def BCA(self,sem,fee):
+        print("No. of sememsters in BCA is:", sem)
+        print("Total Fee of BCA is:",fee)
+    def Btech(self,sem,fee):
+        print("No. of sememsters in Btech is:", sem)
+        print("Total Fee of Btech is:",fee)
+class college(UCS):
+    def deatils(self):
+        name = "SHUATS"
+        print("our college name is",name)
+obj = college()
+
+obj.Mtech(4,300000)
+obj.BCA(6,100000)
+
+
+class paranetClass():
+    def __init__(self):
+        pass
+class subClass(parentClass):
+    def __init__(self):
+        super()
+    
+    
+
+
+
+class Computer():
+    def __init__(self, name, r, rom):
+        self.name = name
+        self.ram = r
+        self.rom = rom
+class Laptop(Computer):
+    def __init__(self, name, r,rom, ssd, model):
+        self.ssd = ssd
+        self.model = model
+        super().__init__(name, r,rom)
+obj = Laptop("Asus","4GB","1TB", "256GB","Vivo Book")
+print("Name of my Computer is:", obj.name)
+print("Name of my Laptop is:", obj.name)
+print("SSD of my Laptop is:", obj.ssd)
+print("Rom of my computer is:",obj.rom)
+
+'''
+
+class rectangle:
+    def __init__(self,length, width):
+        self.length = length
+        self.width = width
+    def area(self):
+        return self.length+self.width
+    def perimeter(self):
+        return 2*self.length+2*self.width
+class square(rectangle):
+    def __init__(self, length, width):
+        super().__init__(length,width)
+    
+obj = square(10,30)
+print(obj.area())
+print(obj.perimeter())
+    
