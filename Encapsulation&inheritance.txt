@@ -134,7 +134,7 @@ obj.myinfo("Avanish",26)
 obj.job_appl("Python Developer")
 
 
-
+#######################################################################
 
 class PCS:
     def MCA(self,sem,fee):
@@ -163,7 +163,7 @@ obj = college()
 obj.Mtech(4,300000)
 obj.BCA(6,100000)
 
-
+################################################################################
 class paranetClass():
     def __init__(self):
         pass
@@ -174,7 +174,7 @@ class subClass(parentClass):
     
 
 
-
+#############################################################################
 class Computer():
     def __init__(self, name, r, rom):
         self.name = name
@@ -191,7 +191,7 @@ print("Name of my Laptop is:", obj.name)
 print("SSD of my Laptop is:", obj.ssd)
 print("Rom of my computer is:",obj.rom)
 
-'''
+###########################################################################
 
 class rectangle:
     def __init__(self,length, width):
