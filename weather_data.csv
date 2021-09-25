@@ -1,0 +1,11 @@
+day,temprature,windspeed,event
+01-01-2021,32,6,Rainy
+02-01-2021,NaN,9,Sunny
+03-01-2021,28,NaN,Snow
+04-01-2021,NaN,7,NaN
+05-01-2021,32,NaN,Rainy
+06-01-2021,NaN,NaN,Sunny
+07-01-2021,NaN,NaN,NaN
+08-01-2021,34,8,NaN
+09-01-2021,40,12,Cloudy
+10-01-2021,37,10,Sunny
